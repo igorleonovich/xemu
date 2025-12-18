@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git rm --cached -r .
+git clean -Xdf
 
 ./cleanup-build.sh
 ./build.sh
