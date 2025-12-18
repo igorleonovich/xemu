@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(lldb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/dist/xemu.app",
+            "args": [
+                // "-machine","xbox,avpack=hdtv",
+                // "-s",
+                // "-S"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/dist",
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "setupCommands": [
+                {
+                    "description": "Ignore SIGUSR2",
+                    "text": "process handle -p yes -s no -n no SIGUSR2"
+                }
+            ],
+        }
+    ]
+}
